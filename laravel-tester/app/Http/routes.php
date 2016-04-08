@@ -19,7 +19,11 @@
 // });
 
 Route::get('/register', 'UserController@index');
+<<<<<<< HEAD
 Route::post('/register', 'UserController@create');
+=======
+Route::post('/register', array('user'->'UserController@create'));
+>>>>>>> cb8dbdcfe740fede221b5e4d8f69dc4370adf28a
 Route::get('/home', 'HomeController@index');
 // Route::get('/', function () {
 //     return view('welcome');
