@@ -12,20 +12,7 @@
 	    <title>MargoFoodies | a webapp for find the best combination to eat</title>
 	</head>
 	<body>
-		<form action="http://localhost/Margofoodies-dummy/laravel-tester/public/register" method="POST">
-			<label>Nama Lengkap</label>
-			<input type="text" class="form-control" name="nama_lengkap"></input></br>
-
-			<label>Email</label>
-			<input type="text" name="email"></input></br>
-
-			<label>Username</label>
-			<input type="text" name="username"></input></br>
-
-			<label>Password</label>
-			<input type="text" name="password"></input></br>
-			<button type="submit">submit</button>
-		</form>
+		<h1> ini home </h1>
 	</body>
 	<footer>
 		<p>This is example footer</p>
