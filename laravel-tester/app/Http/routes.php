@@ -19,7 +19,7 @@
 // });
 
 Route::get('/register', 'UserController@index');
-Route::post('/register', 'UserController@store');
+Route::post('/register', array('user'->'UserController@create'));
 Route::get('/home', 'HomeController@index');
 // Route::get('/', function () {
 //     return view('welcome');
