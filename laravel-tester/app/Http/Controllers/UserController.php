@@ -6,7 +6,8 @@ namespace App\Http\Controllers;
 use DB;
 use App\Http\Requests;
 use Request;
-use App\User;
+use App\Users;
+use Illuminate\Routing\Redirector;
 
 class UserController extends Controller
 {
@@ -20,6 +21,7 @@ class UserController extends Controller
     	// DB::table('users')->insert([
     	// 	'nama'=>$input
     	// ]);
-    	User::create($input);
+    	Users::create($input);
+        return redirect('home');
     }
 }
