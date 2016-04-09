@@ -22,7 +22,7 @@
                 </span>
             @endif
 			<label>Email</label>
-			<input type="text" name="email"></input></br>
+			<input type="email" name="email"></input></br>
 			@if ($errors->has('email'))
                 <span class="help-block">
                     <strong>{{ $errors->first('email') }}</strong>
@@ -36,7 +36,7 @@
                 </span>
             @endif
 			<label>Password</label>
-			<input type="text" name="password"></input></br>
+			<input type="password" name="password"></input></br>
 			<!-- @if ($errors->has('password'))
                 <span class="help-block">
                     <strong>{{ $errors->first('password') }}</strong>
