@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Input;
 
 class UserController extends Controller
 {
+    // menampilkan halaman register
     public function index(){
     	return view('register');
     }
 
+    // melakukan validasi data terhadap input form
     public function create(Request $request){
        $this -> val($request);
 
@@ -28,9 +30,8 @@ class UserController extends Controller
         ]);
     }
 
+    // menyimpan (store) data yg sudah tervalidasi kedatabase
     public function val(){
-       
-
         $user = new Users;
         $user->nama_lengkap = Input::get('nama_lengkap');
         $user->username = Input::get('username');
@@ -39,11 +40,5 @@ class UserController extends Controller
         $user->save();
         return redirect('home');
     }
-
-    // public function store(array $data){
-        
-        
-    // }
-
 }
      
