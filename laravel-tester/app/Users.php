@@ -14,10 +14,10 @@ class Users extends Model
         'email',
         'password',
         'update_at',
-        'created_at'
+        'created_at',
     ];
 
     protected $hidden = [
-        'password'
+        'password',
     ];
 }

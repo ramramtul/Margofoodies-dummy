@@ -14,6 +14,7 @@
 	<body>
 		<form action="http://localhost/Margofoodies-dummy/laravel-tester/public/register" method="POST">
 			{!! csrf_field() !!}
+
 			<label>Nama Lengkap</label>
 			<input type="text" class="form-control" name="nama_lengkap"></input></br>
 			@if ($errors->has('nama_lengkap'))
@@ -21,13 +22,15 @@
                     <strong>{{ $errors->first('nama_lengkap') }}</strong>
                 </span>
             @endif
+			
 			<label>Email</label>
-			<input type="text" name="email"></input></br>
+			<input type="email" name="email"></input></br>
 			@if ($errors->has('email'))
                 <span class="help-block">
                     <strong>{{ $errors->first('email') }}</strong>
                 </span>
             @endif
+			
 			<label>Username</label>
 			<input type="text" name="username"></input></br>
 			@if ($errors->has('username'))
@@ -35,13 +38,15 @@
                     <strong>{{ $errors->first('username') }}</strong>
                 </span>
             @endif
+			
 			<label>Password</label>
-			<input type="text" name="password"></input></br>
+			<input type="password" name="password"></input></br>
 			<!-- @if ($errors->has('password'))
                 <span class="help-block">
                     <strong>{{ $errors->first('password') }}</strong>
                 </span>
             @endif -->
+			
 			<button type="submit">submit</button>
 		</form>
 	</body>
