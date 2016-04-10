@@ -19,7 +19,7 @@
 			<input type="text" class="form-control" name="nama_lengkap"></input></br>
 			@if ($errors->has('nama_lengkap'))
                 <span class="help-block">
-                    <strong>{{ $errors->first('nama_lengkap') }}</strong></br>
+                    <strong>{{ $errors->first('nama_lengkap') }}</strong>
                 </span>
             @endif
 			
@@ -27,25 +27,25 @@
 			<input type="email" name="email"></input></br>
 			@if ($errors->has('email'))
                 <span class="help-block">
-                    <strong>{{ $errors->first('email') }}</strong></br>
+                    <strong>{{ $errors->first('email') }}</strong>
                 </span>
             @endif
-
+			
 			<label>Username</label>
 			<input type="text" name="username"></input></br>
 			@if ($errors->has('username'))
                 <span class="help-block">
-                    <strong>{{ $errors->first('username') }}</strong></br>
+                    <strong>{{ $errors->first('username') }}</strong>
                 </span>
             @endif
 			
 			<label>Password</label>
 			<input type="password" name="password"></input></br>
-			@if ($errors->has('password'))
+			<!-- @if ($errors->has('password'))
                 <span class="help-block">
-                    <strong>{{ $errors->first('password') }}</strong></br>
+                    <strong>{{ $errors->first('password') }}</strong>
                 </span>
-            @endif
+            @endif -->
 			
 			<button type="submit">submit</button>
 		</form>

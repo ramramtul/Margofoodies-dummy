@@ -18,17 +18,20 @@ class UserController extends Controller
     	return view('register');
     }
 
-    // menyimpan (store) data yg sudah tervalidasi kedatabase
+    // melakukan validasi data terhadap input form
     public function create(Request $request){
-        //Users::create($request->all());
+       $this -> val($request);
+
         $this->validate($request, [
-            'nama_lengkap' => 'required|max:255',
+            'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6',
-            'username' => 'required|min:3'
+            'password' => 'required|min:6|confirmed',
+            'username' => 'required|min:3',
         ]);
+    }
 
-
+    // menyimpan (store) data yg sudah tervalidasi kedatabase
+    public function val(){
         $user = new Users;
         $user->nama_lengkap = Input::get('nama_lengkap');
         $user->username = Input::get('username');
@@ -37,12 +40,4 @@ class UserController extends Controller
         $user->save();
         return redirect('home');
     }
-
-    // melakukan validasi data terhadap input form
-    // public function create(Request $request){
-    //     $this->store($request);
-        
-    // }
-
 }
-     
